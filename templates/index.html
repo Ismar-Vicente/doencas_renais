@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Previsão de Doenças Renais</title>
+
+</head>
+<body>
+    <div style="color:rgb(119, 119, 119);" class="container">
+        <h2 class='container-heading'><span class="heading_font"><center>Sistema de Previsão de Doenças Renais</center></span></h2>
+    </div>
+
+    <div style="color:rgb(72, 70, 70);" class="ml-container">
+        <form action="{{ url_for('predict') }}" method="POST">
+            
+            <br>
+            <h3>Specific Gravity
+            <input id="first" name="sg" placeholder="Ex: (1.005,1.010,1.015,1.020,1.025)" required="required"></h3>
+            
+            <h3>Hyper Tension
+            <input id="second" name="htn" placeholder="Yes = 1, No=0" required="required"></h3>
+            
+            <h3>Hemoglobin
+            <input id="third" name="hemo" placeholder="in gms" required="required"></h3>
+            
+            <h3>Diabetes Mellitus
+            <input id="fourth" name="dm" placeholder="Yes = 1, No=0" required="required"></h3>
+            
+            <h3>Albumin
+            <input id="fifth" name="al" placeholder="(0,1,2,3,4,5)" required="required"></h3>
+            
+            <h3>Appetite
+            <input id="sixth" name="appet" placeholder="Good = 1, Poor = 0" required="required"></h3>
+            
+            <h3>Red Blood Cell Count
+            <input id="seventh" name="rc" placeholder="in Millions/cmm" required="required"></h3>
+            <h3>Pus Cell
+            <input id="eight" name="pc" placeholder="Normal = 0, Abnormal = 1" required="required"></h3>            
+            <br>
+            <button id="sub" class = "botaoEnviar" type="submit ">Enviar</button>
+            <br>                        
+            <br>
+            <p class='footer-description'>Desenvolvido por Ismar Vicente</p>
+
+        </form>
+    </div>
+
+
+
+
+<style>
+
+/* Background Image */
+body
+{
+/*background-image:url("https://cienciadosdados.com/images/2022/Rim.jpg");
+background-image: url("https://hsaude.net.br/wp-content/uploads/2021/04/Dia-Mundial-do-Rim-2.jpg");*/
+
+/*background-image: url("https://blog.bjcvs.org/wp-content/uploads/2019/06/blog18.jpg");*/
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: 50% 50%;
+
+}
+
+.ml-container {
+    display: flex;
+    
+    border: 1px solid rgb(202, 204, 202);
+    background-color: rgb(211, 211, 211);
+    width: 90%;
+	height: 90%;
+    margin-left: 25px;
+    padding: 5px;
+    
+    
+}
+
+/* Color */
+body{
+	font-family: Arial, Helvetica,sans-serif;
+    /* text-align: left;*/
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* Heading Font */
+.container-heading{
+    margin: 0;
+}
+
+.heading_font{
+    color: rgb(38, 63, 206);
+    text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 45;
+	font-weight: normal;
+}
+
+
+
+/* Box */
+        #first {
+            border-radius: 10px;
+            height: 30px;
+            width: 300px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 10px;
+            height: 25px;
+            width: 160px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 10px;
+            height: 25px;
+            width: 120px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 10px;
+            height: 25px;
+            width: 160px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fifth {
+            border-radius: 10px;
+            height: 25px;
+            width: 130px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #sixth {
+            border-radius: 10px;
+            height: 25px;
+            width: 200px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #seventh {
+            border-radius: 10px;
+            height: 25px;
+            width: 180px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #eight {
+            border-radius: 10px;
+            height: 25px;
+            width: 260px;
+            font-size: 20px;
+            text-align: center;            
+        }
+
+
+/* Submit Button */
+    #sub {
+        height: 43px;
+        text-align: center;              
+    }
+    .botaoEnviar{
+        width: 250px;
+        text-align: center;
+        padding: 15px 20px;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        background-color: #edc84f;
+        font-size: 18px;        
+    }
+
+</style>
+
+
+</body>
+
+</html>
+
+
